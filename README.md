@@ -1,1 +1,1 @@
-# sozluk-deneme
+# Sozluk7
