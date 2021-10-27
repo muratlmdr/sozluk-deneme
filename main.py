@@ -62,6 +62,17 @@ def giris():
     else:
         return render_template("giris.html")
 
+@app.route('/uyeol', methods=['GET', 'POST'])
+def uye_ol():
+    if request.method == 'POST':
+        kayit = dict(request.form)
+        kayit["_id"] = kayit["email"]
+        kayit["rol"] = "musteri"
+        kullanicilar_tablosu.insert_one(kayit)
+        return redirect("/giris", code=302)
+    else:
+        return render_template("uyeol.html")
+
 
 @app.route('/yenibaslik', methods=['GET', 'POST'])
 def yeni_baslik():
