@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'bizim cok zor gizli sozcugumuz'
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-mydb = myclient["sozluk7DB"]
+mydb = myclient["sozlukDB"]
 kullanicilar_tablosu = mydb["kullanicilar"]
 basliklar_tablosu = mydb["basliklar"]
 yazilar_tablosu = mydb["yazilar"]
